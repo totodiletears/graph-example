@@ -36,6 +36,21 @@ export class Counter extends ethereum.SmartContract {
   static bind(address: Address): Counter {
     return new Counter("Counter", address);
   }
+
+  count(): BigInt {
+    let result = super.call("count", "count():(uint256)", []);
+
+    return result[0].toBigInt();
+  }
+
+  try_count(): ethereum.CallResult<BigInt> {
+    let result = super.tryCall("count", "count():(uint256)", []);
+    if (result.reverted) {
+      return new ethereum.CallResult();
+    }
+    let value = result.value;
+    return ethereum.CallResult.fromValue(value[0].toBigInt());
+  }
 }
 
 export class UpdateCall extends ethereum.Call {

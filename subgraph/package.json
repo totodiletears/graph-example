@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "codegen": "graph codegen ./subgraph.yaml",
-    "create": "graph create --node http://localhost:8020/ totodiletears/graph-example/subgraph",
-    "remove": "graph remove --node http://localhost:8020/ totodiletears/graph-example/subgraph",
-    "deploy": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 totodiletears/graph-example/subgraph"
+    "create-local": "graph create --node http://localhost:8020/ totodiletears/graph-example/subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ totodiletears/graph-example/subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 totodiletears/graph-example/subgraph"
   },
   "keywords": [],
   "author": "",

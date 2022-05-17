@@ -4,7 +4,7 @@ features:
   - fullTextSearch
 repository: https://github.com/totodiletears/graph-example/subgraph
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Counter
@@ -21,8 +21,8 @@ dataSources:
         - Counter
       abis:
         - name: Counter
-          file: ../contracts/artifacts/contracts/Counter.sol/Counter.json
+          file: contracts/artifacts/contracts/Counter.sol/Counter.json
       eventHandlers:
         - event: CounterUpdated(indexed address,uint256)
           handler: handleCounterUpdated
-      file: ./mappings/counter.ts
+      file: Counter/Counter.wasm

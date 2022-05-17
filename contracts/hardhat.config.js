@@ -23,7 +23,7 @@ module.exports = {
   networks: {
     hardhat: {},
     testnet: {
-      url: "https://api.s0.ps.hmny.io/",
+      url: "https://api.s0.b.hmny.io",
       accounts: {
         mnemonic: process.env.MNEMONIC_PHRASE,
         path: "m/44'/60'/0'/0",
