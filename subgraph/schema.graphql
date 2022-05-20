@@ -1,6 +1,0 @@
-type Update @entity {
-  id: ID!
-  block: BigInt!
-  from: String!
-  count: BigInt!
-}

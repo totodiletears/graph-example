@@ -1,7 +1,9 @@
 - prep
 
-start graph-node
-start ipfs daemon
+ipfs init
+ipfs daemon
+
+paste cargo file into graph-node
 
 - contracts
 
@@ -9,13 +11,14 @@ yarn
 npx hardhat compile
 npx hardhat test --network hardhat
 npx hardhat run scripts/deploy-counter.js
+copy address into subgraph
 
 - subgraph
 
 yarn
 yarn codegen
-yarn create
-yarn deploy
+yarn create-local
+yarn deploy-local
 
 - front-end
 
